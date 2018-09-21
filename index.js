@@ -1,3 +1,3 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import App from './src/app/App';
 AppRegistry.registerComponent('protoscreens', () => App);
