@@ -21,7 +21,7 @@ class App extends React.Component {
     return (
       <View>
         <Header
-          leftComponent={{ icon: 'menu'}}
+          leftComponent={{ icon: 'menu', onPress: this._handleMenu}}
           centerComponent={{text: 'Proto-Screens'}}
           rightComponent={<ArrowSelector onPress={this._handlePressArrowSelector}/>}
           />
@@ -32,6 +32,10 @@ class App extends React.Component {
         </View>
     )
   }
+
+  _handleMenu = event => (
+    this.setState({index: null})
+  )
 
   _handlePressArrowSelector = direction => event => {
     let { index, screens } = this.state
