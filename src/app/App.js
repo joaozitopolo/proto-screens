@@ -39,7 +39,7 @@ class App extends React.Component {
 
   _handlePressArrowSelector = direction => event => {
     let { index, screens } = this.state
-    index = ((index || 0) + direction)
+    index = (index === null) ? direction - 1 : index + direction
     index = (index < 0) ? screens.length - 1 : (index >= screens.length) ? 0 : index
     this.setState({index}) 
   }
